@@ -46,8 +46,6 @@ public class TableViewForm extends Application {
         FormModel fm = new FormModel();
         ArrayList<Form> listForm = fm.query();
 
-        System.out.println("run here");
-
         columnImage.setCellFactory(
                 new Callback<TableColumn<Form, String>, TableCell<Form, String>>() {
             @Override
@@ -73,7 +71,6 @@ public class TableViewForm extends Application {
         ObservableList<Form> observableList = FXCollections.observableArrayList();
         observableList.addAll(listForm);
         tableView.getItems().addAll(observableList);
-        System.out.println("run here 2");
 
         tableView.getColumns().addAll(columnImage, columnPrice, columnName);
         Scene scene = new Scene(tableView, 500, 500);
